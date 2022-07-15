@@ -1,0 +1,16 @@
+[Unit]
+Description=odoo13
+Requires=postgresql.service
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+SyslogIdentifier=odoo13
+PermissionsStartOnly=true
+User=odoo13
+Group=odoo13
+ExecStart=/odoo13/odoo/odoo13_venv/bin/python3 /odoo13/odoo/odoo-bin -c /etc/odoo13.conf
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target

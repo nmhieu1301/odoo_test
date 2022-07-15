@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+   
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="less_minimal.list">
+      <field name="name">LessMinimal list</field>
+      <field name="model">less_minimal.less_minimal</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="less_minimal.action_window">
+      <field name="name">LessMinimal window</field>
+      <field name="res_model">less_minimal.less_minimal</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="less_minimal.action_server">
+      <field name="name">LessMinimal server</field>
+      <field name="model_id" ref="model_less_minimal_less_minimal"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="LessMinimal" id="less_minimal.menu_root"/>
+-->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="less_minimal.menu_1" parent="less_minimal.menu_root"/>
+    <menuitem name="Menu 2" id="less_minimal.menu_2" parent="less_minimal.menu_root"/>
+-->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="less_minimal.menu_1_list" parent="less_minimal.menu_1" action="less_minimal.action_window"/>
+    <menuitem name="Server to list" id="less_minimal" parent="less_minimal.menu_2" action="less_minimal.action_server"/>
+-->
+  </data>
+</odoo>
